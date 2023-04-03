@@ -1,0 +1,15 @@
+<canvas id="myCanvas" #canvas style="border: 1px solid;" width="600" height="600" (click)="collectAndDraw($event)">
+
+</canvas>
+<div *ngIf="concav">
+    <p>Mnogougao je konkavan, pokusajete ponovo</p>
+</div>
+<div *ngIf="convex">
+    <p>Mnogougao je konveksan, izaberite tacku za proveru</p>
+    <br><small>Ako je tacka </small><p style="color: green;">zelena</p><small>nalazi se unutar mnogougla</small>
+    <br><small>Ako je tacka </small><p style="color: red;">crvena</p><small>nalazi se izvan mnogougla</small>
+</div>
+<!-- <div *ngIf="check3">Broj temena mora biti veci od 3</div> -->
+<br><label for="dotnumber">Unesite broj temena mnogougla</label>
+<input id="dotnumber" type="number" [(ngModel)]="inputValue">
+<button type="submit" (click)="refreshCanvas()">Refresh canvas</button>
